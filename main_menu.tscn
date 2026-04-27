@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bw5bvqrnt541i"]
+
+[ext_resource type="Script" uid="uid://v1b5u4kciy4c" path="res://main_menu.gd" id="1_06t4h"]
+
+[node name="MainMenu" type="Node2D" unique_id=1391100140]
+script = ExtResource("1_06t4h")
+
+[node name="MainMenuTitle" type="Label" parent="." unique_id=54765066]
+offset_left = 449.0
+offset_top = 76.0
+offset_right = 562.0
+offset_bottom = 99.0
+theme_type_variation = &"HeaderLarge"
+text = "CRYSTAL SAGA"
+
+[node name="Start" type="Button" parent="." unique_id=152165739]
+offset_left = 514.0
+offset_top = 358.0
+offset_right = 560.0
+offset_bottom = 389.0
+text = "Start"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
