@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Crystal Saga"
-run/main_scene="uid://bw5bvqrnt541i"
+run/main_scene="uid://bca8xu1klvqi8"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
