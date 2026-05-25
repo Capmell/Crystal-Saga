@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://bca8xu1klvqi8"]
+
+[ext_resource type="Script" uid="uid://d3bur3wdqxyrd" path="res://level_1.gd" id="1_3hls8"]
+[ext_resource type="Texture2D" uid="uid://bk54jau5rx88o" path="res://Ground flat for terrain.png" id="2_hbghi"]
+[ext_resource type="PackedScene" uid="uid://bexh3w4d4h8um" path="res://main_player.tscn" id="3_hn12h"]
+[ext_resource type="Texture2D" uid="uid://dstve2pbjnlnr" path="res://finish line.png" id="4_ihfcg"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ihfcg"]
+resource_name = "grass "
+texture = ExtResource("2_hbghi")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_rka8t"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_ihfcg")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5hph3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ihfcg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j7kpp"]
+size = Vector2(52, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihfcg"]
+size = Vector2(2201.5, 85)
+
+[node name="level 1" type="Node2D" unique_id=1432905228]
+script = ExtResource("1_3hls8")
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1111431178]
+tile_set = SubResource("TileSet_rka8t")
+format = 2
+layer_0/tile_data = PackedInt32Array(2031619, 0, 0, 2031618, 0, 0, 2031617, 0, 0, 2031616, 0, 0, 2031620, 0, 0, 2031621, 0, 0, 2031622, 0, 0, 2031629, 0, 0, 2031630, 0, 0, 2031631, 0, 0, 2031640, 0, 0, 2031641, 0, 0, 2031650, 0, 0, 1900581, 0, 0, 1703977, 0, 0, 1703983, 0, 0, 1703989, 0, 0, 1703990, 0, 0, 1703991, 0, 0, 1703992, 0, 0, 1703993, 0, 0, 1703994, 0, 0, 1703995, 0, 0, 1507390, 0, 0, 1507391, 0, 0, 1507392, 0, 0, 1441857, 0, 0, 1441858, 0, 0, 1441859, 0, 0, 1638474, 0, 0, 1638475, 0, 0, 1638476, 0, 0, 1638477, 0, 0, 1638478, 0, 0, 2359389, 0, 0, 2359390, 0, 0, 2359391, 0, 0, 2359392, 0, 0, 2359395, 0, 0, 2359396, 0, 0, 2359397, 0, 0, 2359398, 0, 0, 2293871, 0, 0, 2293872, 0, 0, 2359408, 0, 0, 2359409, 0, 0, 2359410, 0, 0, 2359411, 0, 0, 2359420, 0, 0, 2359421, 0, 0, 2359422, 0, 0, 2359423, 0, 0, 2359424, 0, 0, 2359434, 0, 0, 2359435, 0, 0, 2359436, 0, 0, 2359437, 0, 0, 2359438, 0, 0, 2359439, 0, 0, 2359440, 0, 0, 2359441, 0, 0, 2359442, 0, 0, 2359429, 0, 0)
+
+[node name="MainPlayer" parent="." unique_id=1251868389 instance=ExtResource("3_hn12h")]
+position = Vector2(109, 423)
+
+[node name="Level 2" type="Label" parent="." unique_id=1937491541]
+anchors_preset = -1
+anchor_left = -0.010000001
+anchor_right = -0.010000001
+offset_left = 36.0
+offset_top = 389.0
+offset_right = 185.0
+offset_bottom = 412.0
+text = "Level 1"
+
+[node name="Finish" type="Area2D" parent="." unique_id=825551229]
+position = Vector2(2325, 556)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Finish" unique_id=1676134224]
+position = Vector2(6, -22)
+scale = Vector2(3.562489, 5.25)
+sprite_frames = SubResource("SpriteFrames_5hph3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Finish" unique_id=1380793631]
+position = Vector2(5, 3)
+shape = SubResource("RectangleShape2D_j7kpp")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=857653710]
+position = Vector2(49, 547)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=306323039]
+position = Vector2(1143.25, 113)
+shape = SubResource("RectangleShape2D_ihfcg")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
