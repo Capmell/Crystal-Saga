@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bpp1fvhmbtkyb"]
+
+[ext_resource type="Texture2D" uid="uid://dotc2npp0p734" path="res://crystal.png" id="1_200vn"]
+[ext_resource type="Script" uid="uid://bgno7abnoanr8" path="res://crystal.gd" id="1_kxb6e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kxb6e"]
+size = Vector2(18, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gxs1y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_200vn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Crystal" type="Area2D" unique_id=623877105]
+script = ExtResource("1_kxb6e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=138810374]
+shape = SubResource("RectangleShape2D_kxb6e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2092920492]
+sprite_frames = SubResource("SpriteFrames_gxs1y")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=594920625]
+
+[node name="collected" type="Label" parent="CanvasLayer" unique_id=2014568023]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

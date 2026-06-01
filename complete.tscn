@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://75ts87q1oyxc"]
+
+[node name="Complete" type="Node2D" unique_id=1504605395]
+
+[node name="Label" type="Label" parent="." unique_id=89243123]
+offset_left = 505.0
+offset_top = 318.0
+offset_right = 637.0
+offset_bottom = 341.0
+text = "Game completed"

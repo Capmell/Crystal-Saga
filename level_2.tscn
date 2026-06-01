@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bk54jau5rx88o" path="res://Ground flat for terrain.png" id="1_xdadj"]
 [ext_resource type="PackedScene" uid="uid://bexh3w4d4h8um" path="res://main_player.tscn" id="2_nmjpi"]
 [ext_resource type="Texture2D" uid="uid://dstve2pbjnlnr" path="res://finish line.png" id="4_n7ypv"]
+[ext_resource type="PackedScene" uid="uid://bpp1fvhmbtkyb" path="res://crystal.tscn" id="5_n7ypv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1y8me"]
 resource_name = "grass "
@@ -68,7 +69,7 @@ script = ExtResource("1_1y8me")
 [node name="TileMap" type="TileMap" parent="." unique_id=359763361]
 tile_set = SubResource("TileSet_7j8ne")
 format = 2
-layer_0/tile_data = PackedInt32Array(2031619, 0, 0, 2031618, 0, 0, 2031617, 0, 0, 2031616, 0, 0, 2031620, 0, 0, 2031621, 0, 0, 2031622, 0, 0, 2031629, 0, 0, 2031630, 0, 0, 2031631, 0, 0, 2031640, 0, 0, 2031641, 0, 0, 2031650, 0, 0, 1900581, 0, 0, 1703977, 0, 0, 1703983, 0, 0, 1703989, 0, 0, 1703990, 0, 0, 1703991, 0, 0, 1703992, 0, 0, 1703993, 0, 0, 1703994, 0, 0, 1703995, 0, 0, 1507390, 0, 0, 1507391, 0, 0, 1507392, 0, 0, 1441857, 0, 0, 1441858, 0, 0, 1441859, 0, 0, 1638474, 0, 0, 1638475, 0, 0, 1638476, 0, 0, 1638477, 0, 0, 1638478, 0, 0, 2359389, 0, 0, 2359390, 0, 0, 2359391, 0, 0, 2359392, 0, 0, 2359395, 0, 0, 2359396, 0, 0, 2359397, 0, 0, 2359398, 0, 0, 2293871, 0, 0, 2293872, 0, 0, 2359408, 0, 0, 2359409, 0, 0, 2359410, 0, 0, 2359411, 0, 0, 2359420, 0, 0, 2359421, 0, 0, 2359422, 0, 0, 2359423, 0, 0, 2359424, 0, 0, 2359434, 0, 0, 2359435, 0, 0, 2359436, 0, 0, 2359437, 0, 0, 2359438, 0, 0, 2359439, 0, 0, 2359440, 0, 0, 2359441, 0, 0, 2359442, 0, 0, 2359429, 0, 0)
+layer_0/tile_data = PackedInt32Array(2031619, 0, 0, 2031618, 0, 0, 2031617, 0, 0, 2031616, 0, 0, 2031620, 0, 0, 2031621, 0, 0, 2031622, 0, 0, 2359434, 0, 0, 2359435, 0, 0, 2359436, 0, 0, 2359437, 0, 0, 2359438, 0, 0, 2359439, 0, 0, 2359440, 0, 0, 2359441, 0, 0, 2359442, 0, 0, 2031626, 0, 0, 2031627, 0, 0, 2031628, 0, 0, 1900562, 0, 0, 1900563, 0, 0, 1900564, 0, 0, 1769485, 0, 0, 1769486, 0, 0, 1769487, 0, 0, 1572882, 0, 0, 1572883, 0, 0, 1572884, 0, 0, 1441816, 0, 0, 1441817, 0, 0, 1441818, 0, 0, 1179677, 0, 0, 1179678, 0, 0, 1179679, 0, 0, 983075, 0, 0, 983076, 0, 0, 983077, 0, 0, 786474, 0, 0, 786475, 0, 0, 786476, 0, 0, 786483, 0, 0, 786484, 0, 0, 786485, 0, 0, 2359353, 0, 0, 2359354, 0, 0, 2359355, 0, 0, 1835078, 0, 0, 1835079, 0, 0, 1835080, 0, 0, 2162752, 0, 0, 2162753, 0, 0, 2162754, 0, 0, 1835089, 0, 0, 1835090, 0, 0, 1835091, 0, 0, 1835099, 0, 0, 1835100, 0, 0, 1835101, 0, 0, 1572957, 0, 0, 1572958, 0, 0, 1572959, 0, 0, 1310815, 0, 0, 1310816, 0, 0, 1310817, 0, 0, 1114211, 0, 0, 1114212, 0, 0, 1114213, 0, 0, 852071, 0, 0, 852072, 0, 0, 852073, 0, 0, 721005, 0, 0, 721006, 0, 0, 721007, 0, 0, 721011, 0, 0, 721012, 0, 0, 721013, 0, 0, 721019, 0, 0, 721020, 0, 0, 721021, 0, 0, 721027, 0, 0, 721028, 0, 0, 721029, 0, 0)
 
 [node name="MainPlayer" parent="." unique_id=1251868389 instance=ExtResource("2_nmjpi")]
 position = Vector2(109, 423)
@@ -101,6 +102,17 @@ position = Vector2(49, 547)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1789093023]
 position = Vector2(1143.25, 113)
 shape = SubResource("RectangleShape2D_n7ypv")
+
+[node name="Crystal" parent="." unique_id=623877105 instance=ExtResource("5_n7ypv")]
+
+[node name="Crystal2" parent="." unique_id=634109530 instance=ExtResource("5_n7ypv")]
+position = Vector2(400, 284)
+
+[node name="Crystal3" parent="." unique_id=1292289242 instance=ExtResource("5_n7ypv")]
+position = Vector2(948, 327)
+
+[node name="Crystal4" parent="." unique_id=688966635 instance=ExtResource("5_n7ypv")]
+position = Vector2(1582, 169)
 
 [connection signal="body_entered" from="Finish" to="." method="_on_finish_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
