@@ -61,7 +61,7 @@ animations = [{
 size = Vector2(123, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1jdk1"]
-size = Vector2(3698, 18.5)
+size = Vector2(3816, 22)
 
 [node name="Level 3" type="Node2D" unique_id=1566572500]
 position = Vector2(46, 17)
@@ -101,7 +101,7 @@ shape = SubResource("RectangleShape2D_liaj6")
 position = Vector2(49, 547)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1665205781]
-position = Vector2(1717, 146.25)
+position = Vector2(1658, 148)
 shape = SubResource("RectangleShape2D_1jdk1")
 
 [node name="Crystal" parent="." unique_id=623877105 instance=ExtResource("5_1jdk1")]

@@ -17,3 +17,7 @@ func _on_finish_body_entered(body: Node2D) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 		get_tree().change_scene_to_file("res://level_3.tscn")
+		
+		
+func ready() -> void:
+	Music.bgmPlay()
