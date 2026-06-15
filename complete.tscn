@@ -3,8 +3,8 @@
 [node name="Complete" type="Node2D" unique_id=1504605395]
 
 [node name="Label" type="Label" parent="." unique_id=89243123]
-offset_left = 505.0
-offset_top = 318.0
-offset_right = 637.0
+offset_left = 415.0
+offset_top = 201.0
+offset_right = 724.0
 offset_bottom = 341.0
-text = "Game completed"
+text = "Congrats!!! Game completed"

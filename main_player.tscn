@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bsasb50ckscqe" path="res://main character 2.png" id="2_hv5sx"]
 [ext_resource type="Texture2D" uid="uid://cd1kkywfu76s7" path="res://main char move1.png" id="3_5xm3i"]
 [ext_resource type="Texture2D" uid="uid://cin2u2h2d8jci" path="res://main char move2.png" id="4_l2wx2"]
+[ext_resource type="Texture2D" uid="uid://dfxcyw2ag0nny" path="res://main char move3.png" id="5_4iyst"]
+[ext_resource type="AudioStream" uid="uid://dcj7co1cmbvfg" path="res://dragon-studio-cartoon-jump-463196.mp3" id="5_l2wx2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ihfcg"]
 animations = [{
@@ -16,6 +18,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_l2wx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4iyst")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hv5sx")
 }],
 "loop": true,
 "name": &"default",
@@ -41,3 +49,6 @@ shape = SubResource("CapsuleShape2D_hn12h")
 position = Vector2(3, -3)
 offset = Vector2(0, -5)
 zoom = Vector2(1.5, 1.5)
+
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=169229228]
+stream = ExtResource("5_l2wx2")
