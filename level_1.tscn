@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bexh3w4d4h8um" path="res://main_player.tscn" id="3_hn12h"]
 [ext_resource type="Texture2D" uid="uid://dstve2pbjnlnr" path="res://finish line.png" id="4_ihfcg"]
 [ext_resource type="PackedScene" uid="uid://bpp1fvhmbtkyb" path="res://crystal.tscn" id="5_rka8t"]
+[ext_resource type="PackedScene" uid="uid://b1e7dqk21ulbj" path="res://enemy_1.tscn" id="6_5hph3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ihfcg"]
 resource_name = "grass "
@@ -117,6 +118,9 @@ offset_top = 389.0
 offset_right = 185.0
 offset_bottom = 412.0
 text = "Level 1"
+
+[node name="enemy 1" parent="." unique_id=2125536511 instance=ExtResource("6_5hph3")]
+position = Vector2(2254, 523)
 
 [connection signal="body_entered" from="Finish" to="." method="_on_finish_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

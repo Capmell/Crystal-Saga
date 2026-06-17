@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bexh3w4d4h8um" path="res://main_player.tscn" id="2_nmjpi"]
 [ext_resource type="Texture2D" uid="uid://dstve2pbjnlnr" path="res://finish line.png" id="4_n7ypv"]
 [ext_resource type="PackedScene" uid="uid://bpp1fvhmbtkyb" path="res://crystal.tscn" id="5_n7ypv"]
+[ext_resource type="PackedScene" uid="uid://b1e7dqk21ulbj" path="res://enemy_1.tscn" id="6_0s5r2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1y8me"]
 resource_name = "grass "
@@ -113,6 +114,9 @@ position = Vector2(948, 327)
 
 [node name="Crystal4" parent="." unique_id=688966635 instance=ExtResource("5_n7ypv")]
 position = Vector2(1582, 169)
+
+[node name="enemy 1" parent="." unique_id=1586445209 instance=ExtResource("6_0s5r2")]
+position = Vector2(2263, 506)
 
 [connection signal="body_entered" from="Finish" to="." method="_on_finish_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

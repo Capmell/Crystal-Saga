@@ -28,6 +28,15 @@ offset_bottom = 80.0
 text = "space = jump 
 arrow keys = move
 mouse click for start
-mouse click for restart in game over screen"
+mouse click for restart in game over screen
+Any enemy you see at the end of the levels walk into it to defeat it"
+
+[node name="Label2" type="Label" parent="." unique_id=578126802]
+offset_left = 739.0
+offset_top = 76.0
+offset_right = 806.0
+offset_bottom = 117.0
+text = "Platform to the end of each level 
+collect as many crystals as you can"
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
